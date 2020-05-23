@@ -1,5 +1,8 @@
 import React, { FC } from 'react';
-import { StyledButtonWrapper, StyledButtonContentWrapper } from './styles';
+import {
+  StyledButtonWrapper,
+  StyledButtonContentWrapper,
+} from './styles';
 
 export enum BUTTON_STYLE_VARIANTS {
   default,

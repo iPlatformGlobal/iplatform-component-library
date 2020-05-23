@@ -1,0 +1,33 @@
+import { Meta, Story, Preview, PropsTable } from '@storybook/addon-docs/blocks';
+import Button from './index.tsx';
+
+
+<Meta title="Buttons" component={Button} />
+
+# Button
+
+Buttons communicate the action that will occur when the user touches them.
+
+- Button has different types, sizes and shapes.
+- It can contain text or an icon.
+- A link can look and behave like a button.
+
+### Default Buttons
+
+<Preview>
+  <Story name="Default Button">
+    <Button
+        onClick={() => {}}
+    >
+        Example Button
+    </Button>
+  </Story>
+  <Story name="Default Primary Button">
+    <Button
+      isPrimary={true}
+      onClick={() => {}}
+    >
+      Example Primary Button
+    </Button>
+  </Story>
+</Preview>

@@ -20,7 +20,6 @@ export const StyledButtonWrapper = styled.button<IStyledButtonWrapperProps>`
     } = props;
 
     return css<any>`
-      flex: 0 1 auto;
       font-size: ${BASE_FONT_SIZE * 0.825}rem;
       box-shadow: 1px 1px 0 1px rgba(0,0,0,0.08);
       color: ${theme.constants.primary};
@@ -31,10 +30,10 @@ export const StyledButtonWrapper = styled.button<IStyledButtonWrapperProps>`
       vertical-align: center;
       overflow: hidden;
       user-select: none;
-      border-radius: 1 rem;
+      border-radius: 1rem;
       display: flex;
       outline: none;
-      padding: 0 1 em;
+      padding: 0 1em;
       cursor: pointer;
 
       transition: background-color 150ms linear, color 150ms linear;
