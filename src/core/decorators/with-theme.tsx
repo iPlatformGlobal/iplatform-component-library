@@ -1,7 +1,7 @@
 import React from "react"
 import styled, { ThemeProvider } from 'styled-components';
 
-import 'normalize.css';
+// import 'normalize.css';
 
 import { theme } from '../theme';
 import { StyledWrapperReset } from "../reset-ipf-2";
