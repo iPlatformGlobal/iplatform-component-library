@@ -1,11 +1,12 @@
 import styled, { css } from 'styled-components';
-import { theme as themeConfig } from '../../../core/theme';
+
+import { ApplicationTheme } from '../../../core/theme';
 import { BUTTON_STYLE_VARIANTS } from './';
 
 const BASE_FONT_SIZE = 0.875;
 
 interface IStyledButtonWrapperProps {
-  theme: typeof themeConfig;
+  theme: ApplicationTheme;
   [x: string]: any;
 }
 
@@ -21,11 +22,10 @@ export const StyledButtonWrapper = styled.button<IStyledButtonWrapperProps>`
 
     return css<any>`
       font-size: ${BASE_FONT_SIZE * 0.825}rem;
-      box-shadow: 1px 1px 0 1px rgba(0,0,0,0.08);
       color: ${theme.constants.primary};
       background-color: ${theme.constants.primaryLight};
       height: 1.5rem;
-      margin: 0 0.25rem;
+      // margin: 0 0.25rem;
       justify-content: center;
       vertical-align: center;
       overflow: hidden;
@@ -35,6 +35,8 @@ export const StyledButtonWrapper = styled.button<IStyledButtonWrapperProps>`
       outline: none;
       padding: 0 1em;
       cursor: pointer;
+
+      border: none;
 
       transition: background-color 150ms linear, color 150ms linear;
 
@@ -84,14 +86,26 @@ export const StyledButtonWrapper = styled.button<IStyledButtonWrapperProps>`
         }
       `}
 
-      ${(styleVariant === BUTTON_STYLE_VARIANTS.long) && css`
+      ${(styleVariant === BUTTON_STYLE_VARIANTS.DEFAULT) && css`
+        font-size: 12px;
+        letter-spacing: 0;
+        // text-transform: uppercase;
+        box-shadow: 1px 1px 1px #00000034;
+        border-radius: 20px;
+      `};
+
+      ${(styleVariant === BUTTON_STYLE_VARIANTS.LONG) && css`
         min-width: 108px;
-        //height: 20px;
+        height: 20px;
         font-size: 12px;
         letter-spacing: 0;
         text-transform: uppercase;
         box-shadow: 1px 1px 1px #00000034;
         border-radius: 20px;
+      `};
+
+      ${(styleVariant === BUTTON_STYLE_VARIANTS.LEGACY) && css`
+        box-shadow: 1px 1px 0 1px rgba(0,0,0,0.08);
       `};
     `;
   }}

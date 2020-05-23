@@ -81,3 +81,5 @@ export const theme = {
     // ...sizes,
   },
 };
+
+export type ApplicationTheme = typeof theme;
