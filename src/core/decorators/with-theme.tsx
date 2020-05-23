@@ -3,15 +3,15 @@ import styled, { ThemeProvider } from 'styled-components';
 
 import 'normalize.css';
 
-import { theme } from './theme';
-import { StyledWrapperReset } from "./reset-ipf-2";
+import { theme } from '../theme';
+import { StyledWrapperReset } from "../reset-ipf-2";
 
 const StyledStoryContainer = styled.div`
   margin: 5px;
 `;
 
 
-const ThemeDecorator = (storyFn) => (
+const withTheme = (storyFn) => (
   <StyledWrapperReset>
     <ThemeProvider 
       theme={theme}
@@ -23,9 +23,4 @@ const ThemeDecorator = (storyFn) => (
   </StyledWrapperReset>
 );
 
-export default ThemeDecorator;
-
-/**
- * <StyledWrapperReset>
-</StyledWrapperReset>
- */
+export default withTheme;

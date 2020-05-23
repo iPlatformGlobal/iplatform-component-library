@@ -1,4 +1,4 @@
 import { configure, addDecorator } from "@storybook/react"
-import themeDecorator from "../src/core/theme-decorator"
+import withTheme from "../src/core/decorators/with-theme"
 
-addDecorator(themeDecorator);
+addDecorator(withTheme);
