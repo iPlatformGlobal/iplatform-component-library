@@ -21,6 +21,8 @@ export const StyledButtonWrapper = styled.button<IStyledButtonWrapperProps>`
     } = props;
 
     return css<any>`
+      flex-direction: row;
+      align-items: center;
       font-size: ${BASE_FONT_SIZE * 0.825}rem;
       color: ${theme.constants.primary};
       background-color: ${theme.constants.primaryLight};
