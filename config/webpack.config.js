@@ -1,12 +1,17 @@
 const path = require('path');
+const webpack = require('webpack');
 
 const config = {
   entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, '..', 'dist'),
-    filename: 'ipf-components.js',
+    filename: 'index.js',
+    libraryTarget: 'umd',
+    library: 'ipf-component-library',
+    umdNamedDefine: true
   },
   externals: {
+    react: 'react',
     lodash: {
       commonjs: 'lodash',
       commonjs2: 'lodash',
@@ -20,6 +25,7 @@ const config = {
         '.ts', '.tsx', '.js'
       ]
   },
+  // devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -36,7 +42,7 @@ const config = {
                   targets: {
                     browsers: 'last 2 versions',
                   },
-                  // "useBuiltIns": "usage",
+                  // "useBuiltIns": "entry",
                 },
               ],
               '@babel/react',
