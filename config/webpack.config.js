@@ -11,7 +11,12 @@ const config = {
     umdNamedDefine: true
   },
   externals: {
-    react: 'react',
+    react: {
+      commonjs: 'react',
+      commonjs2: 'react',
+      amd: 'react',
+      root: 'react',
+    },
     lodash: {
       commonjs: 'lodash',
       commonjs2: 'lodash',
@@ -25,7 +30,7 @@ const config = {
         '.ts', '.tsx', '.js'
       ]
   },
-  devtool: 'inline-source-map',
+  // devtool: 'inline-source-map',
   module: {
     rules: [
       {
