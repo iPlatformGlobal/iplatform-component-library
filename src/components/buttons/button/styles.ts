@@ -1,7 +1,10 @@
 import styled, { css } from 'styled-components';
 
 import { ApplicationTheme } from '../../../core/theme';
-import { BUTTON_STYLE_VARIANTS } from './';
+
+import {
+  BUTTON_STYLE_VARIANTS
+} from './index';
 
 const BASE_FONT_SIZE = 0.875;
 
@@ -19,6 +22,8 @@ export const StyledButtonWrapper = styled.button<IStyledButtonWrapperProps>`
       styleVariant,
       theme,
     } = props;
+    
+    console.log('received theme: ', theme);
 
     return css<any>`
       flex-direction: row;
@@ -119,3 +124,6 @@ export const StyledButtonContentWrapper = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+// StyledButtonWrapper.defaultProps = { theme };
+// StyledButtonContentWrapper.defaultProps = { theme };

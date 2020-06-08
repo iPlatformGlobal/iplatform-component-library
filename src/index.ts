@@ -1,1 +1,4 @@
-export { BUTTON_STYLE_VARIANTS, Button } from './components/buttons'
+import { ThemeProvider } from 'styled-components';
+export { Button } from './components/buttons'
+export { ThemeProvider as StyledComponentThemeProvider };
+

@@ -1,2 +1,6 @@
 /scripts
+/storybook-static
 yarn-error.log
+/node_modules
+/public
+/config

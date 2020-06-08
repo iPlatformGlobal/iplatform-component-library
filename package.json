@@ -1,6 +1,6 @@
 {
   "name": "@iplatform/component-library",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "private": true,
   "main": "dist/index.js",
   "typings": "./dist/index.d.ts",
@@ -29,7 +29,8 @@
     "build-storybook": "build-storybook -s public",
     "build:library": "rimraf ./dist && webpack --config ./config/webpack.config.js",
     "build:types": "tsc --emitDeclarationOnly",
-    "build:clean": "rimraf dist"
+    "build:clean": "rimraf dist",
+    "publish:local": "yarn build:library && yalc publish --private"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -79,6 +80,7 @@
     "react-docgen-typescript-loader": "^3.7.2",
     "react-is": "^16.13.1",
     "rimraf": "^3.0.2",
+    "styled-components": "^5.1.1",
     "ts-jest": "^26.0.0",
     "ts-loader": "^7.0.5",
     "webpack-cli": "^3.3.11"

@@ -5,10 +5,11 @@ import {
   StyledButtonContentWrapper,
 } from './styles';
 
+/** @Internal */
 export enum BUTTON_STYLE_VARIANTS {
-  DEFAULT,
-  LONG,
-  LEGACY,
+  DEFAULT = 'default',
+  LONG = 'long',
+  LEGACY = 'legacy',
 }
 
 interface IProps {
@@ -21,10 +22,12 @@ interface IProps {
   disabled?: boolean;
 
   /** Enum for different style variants. */
-  styleVariant?: BUTTON_STYLE_VARIANTS;
+  styleVariant?: 'default' | 'long' | 'legacy';
 
   isPrimary?: boolean;
   hasOutline?: boolean;
+
+  theme?: any;
 }
 
 
@@ -37,6 +40,9 @@ export const Button: FC<IProps> = (props) => {
     isPrimary,
     styleVariant,
   } = props;
+
+  console.log('--- internal debug: button props: ', props);
+  console.log('--- internal debug: button theme: ', props?.theme);
 
   return (
     <StyledButtonWrapper
