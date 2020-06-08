@@ -25,41 +25,13 @@ const config = {
         '.ts', '.tsx', '.js'
       ]
   },
-  // devtool: 'inline-source-map',
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
         test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              [
-                '@babel/env',
-                {
-                  modules: false,
-                  targets: {
-                    browsers: 'last 2 versions',
-                  },
-                  // "useBuiltIns": "entry",
-                },
-              ],
-              '@babel/react',
-              '@babel/typescript',
-            ],
-            plugins: [
-              ['@babel/plugin-proposal-decorators', { legacy: true }],
-              ['@babel/proposal-class-properties', { loose: true }],
-              '@babel/proposal-object-rest-spread',
-              ['babel-plugin-styled-components', { displayName: true }],
-              '@babel/plugin-transform-modules-commonjs',
-              '@babel/plugin-transform-runtime',
-              '@babel/plugin-syntax-dynamic-import',
-              'react-hot-loader/babel',
-            ]
-          }
-        },
+        use: 'ts-loader',
       }
     ]
   }
