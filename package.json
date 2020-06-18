@@ -29,7 +29,9 @@
     "build:library": "rimraf ./dist && webpack --config ./config/webpack.config.js",
     "build:types": "tsc --emitDeclarationOnly",
     "build:clean": "rimraf dist",
-    "publish:local": "yarn build:library && yalc publish --private"
+    "publish:local": "yarn build:library && yalc publish --private",
+    "push:fast": "git push origin master",
+    "push": "git push origin master"
   },
   "eslintConfig": {
     "extends": "react-app"
