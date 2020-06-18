@@ -1,8 +1,5 @@
 import React from "react"
 import styled, { ThemeProvider } from 'styled-components';
-
-// import 'normalize.css';
-
 import { theme } from '../theme';
 import { StyledWrapperReset } from "../reset-ipf-2";
 
@@ -13,12 +10,16 @@ const StyledStoryContainer = styled.div`
 
 const withTheme = (storyFn) => (
   <StyledWrapperReset>
-    <ThemeProvider 
+    <ThemeProvider
       theme={theme}
     >
+      {/*<MUIThemeProvider*/}
+      {/*  theme={muiV2Theme}*/}
+      {/*>*/}
       <StyledStoryContainer>
-        { storyFn() }
+        {storyFn()}
       </StyledStoryContainer>
+      {/*</MUIThemeProvider>*/}
     </ThemeProvider>
   </StyledWrapperReset>
 );
