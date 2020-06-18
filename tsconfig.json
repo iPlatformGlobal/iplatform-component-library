@@ -22,13 +22,15 @@
     "sourceMap": true,
     "outDir": "dist",
     "stripInternal": true,
-    "noEmit": true
+    "noEmit": false
   },
   "include": [
     "src"
   ],
   "exclude": [
     "src/serviceWorker.ts",
-    "src/setupTests.ts"
+    "src/setupTests.ts",
+    "**/storybook/*",
+    "**/*.stories.ts"
   ]
 }

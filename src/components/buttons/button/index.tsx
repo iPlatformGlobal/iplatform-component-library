@@ -12,7 +12,9 @@ export enum BUTTON_STYLE_VARIANTS {
   LEGACY = 'legacy',
 }
 
-interface IProps {
+
+/** @Internal */
+export interface IProps {
   onClick?: (event: MouseEvent) => void;
 
   /** Any html, but usually the button text. */
@@ -24,10 +26,11 @@ interface IProps {
   /** Enum for different style variants. */
   styleVariant?: 'default' | 'long' | 'legacy';
 
+  /** Primary buttons are assigned a more prominent style */
   isPrimary?: boolean;
-  hasOutline?: boolean;
 
-  theme?: any;
+  /** Defaults to false - draw MacOS / Browser outlines around selected buttons */
+  hasOutline?: boolean;
 }
 
 
@@ -40,9 +43,6 @@ export const Button: FC<IProps> = (props) => {
     isPrimary,
     styleVariant,
   } = props;
-
-  console.log('--- internal debug: button props: ', props);
-  console.log('--- internal debug: button theme: ', props?.theme);
 
   return (
     <StyledButtonWrapper
