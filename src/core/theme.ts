@@ -1,3 +1,5 @@
+import { createMuiTheme } from '@material-ui/core';
+
 export const theme = {
   palette: {
     primary: [
@@ -83,3 +85,14 @@ export const theme = {
 };
 
 export type ApplicationTheme = typeof theme;
+
+export const muiV2Theme = createMuiTheme({
+  palette: {
+    primary: {
+      light: '#60839c',
+      main: '#3f586e',
+      dark: '#394F63',
+      contrastText: 'white',
+    },
+  },
+});

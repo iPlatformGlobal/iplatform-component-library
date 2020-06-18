@@ -4,6 +4,10 @@
   "main": "dist/index.js",
   "typings": "./dist/index.d.ts",
   "dependencies": {
+    "@material-ui/core": "^4.10.2",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "@types/material-ui": "^0.21.7",
     "cross-env": "^7.0.2",
     "css-loader": "^3.5.3",
     "normalize.css": "^8.0.1",
@@ -31,8 +35,8 @@
     "build:types": "tsc --emitDeclarationOnly",
     "build:clean": "rimraf dist",
     "publish:local": "yarn build:library && yalc publish --private",
-    "push:fast": "git push origin master",
-    "push": "git push origin master"
+    "push:fast": "git push",
+    "push": "git push"
   },
   "eslintConfig": {
     "extends": "react-app"
