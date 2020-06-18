@@ -20,8 +20,9 @@
     "react": "^16.13.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "yarn run storybook",
+    "build": "yarn run build:library",
+    "publish": "yarn build:library && yalc publish --private",
     "test": "exit 0",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
