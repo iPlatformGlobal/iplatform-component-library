@@ -35,8 +35,8 @@
     "build:types": "tsc --emitDeclarationOnly",
     "build:clean": "rimraf dist",
     "publish:local": "yarn build:library && yalc publish --private",
-    "push:fast": "git push origin master",
-    "push": "git push origin master"
+    "push:fast": "git push",
+    "push": "git push"
   },
   "eslintConfig": {
     "extends": "react-app"
