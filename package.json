@@ -23,8 +23,9 @@
     "react": "^16.13.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "yarn run storybook",
+    "build": "yarn run build:library",
+    "publish": "yarn build:library && yalc publish --private",
     "test": "exit 0",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
@@ -33,8 +34,8 @@
     "build:types": "tsc --emitDeclarationOnly",
     "build:clean": "rimraf dist",
     "publish:local": "yarn build:library && yalc publish --private",
-    "push:fast": "git push origin master",
-    "push": "git push origin master"
+    "push:fast": "git push",
+    "push": "git push"
   },
   "eslintConfig": {
     "extends": "react-app"
