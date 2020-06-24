@@ -19,6 +19,11 @@ export const Description = styled.p`
     margin: 10px 0;
 `;
 
-export const Content = styled.div`
-    margin: 15px 0 50px 0;
+export const Content = styled.div<{noMargin?: boolean}>`
+    ${(props) => {
+      const noMargin = !!props.noMargin;
+      return css`
+        margin: ${noMargin ? '0' : '15px 0 50px 0'};
+      `
+    }};
 `;

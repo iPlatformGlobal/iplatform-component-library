@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import AddIcon from '@material-ui/icons/Add';
+import { Add as AddIcon } from '@material-ui/icons';
 
 import { ButtonContainer, ButtonText, FabButtonComponent, } from './styles';
 

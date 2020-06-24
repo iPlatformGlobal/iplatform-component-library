@@ -29,8 +29,8 @@ export const StyledButtonWrapper = styled.button<IStyledButtonWrapperProps>`
     flex-direction: row;
     align-items: center;
     font-size: ${BASE_FONT_SIZE * 0.825}rem;
-    color: ${theme.constants.primary};
-    background-color: ${theme.constants.primaryLight};
+    color: ${theme.palette.primary.main};
+    background-color: ${theme.palette.primary.contrastText};
     height: 1.5rem;
     // margin: 0 0.25rem;
     justify-content: center;
@@ -48,48 +48,48 @@ export const StyledButtonWrapper = styled.button<IStyledButtonWrapperProps>`
     transition: background-color 150ms linear, color 150ms linear;
 
     &:hover, &:active {
-      background-color: ${theme.constants.primary};
-      color: ${theme.constants.primaryLightBlue};
+      background-color: ${theme.palette.primary.main};
+      color: ${theme.palette.secondary.main};
 
       > svg {
-        fill: ${theme.constants.primaryLightBlue};
-        stroke: ${theme.constants.primaryLightBlue};
+        fill: ${theme.palette.secondary.main};
+        stroke: ${theme.palette.secondary.main};
       }
     }
 
     &:link, &:visited, &:active {
-      color: ${theme.constants.primaryLight};
+      color: ${theme.palette.primary.contrastText};
     }
 
     ${isActive && css`
-      background-color: ${theme.constants.primary};
-      color: ${theme.constants.primaryLight};
+      background-color: ${theme.palette.primary.main};
+      color: ${theme.palette.primary.contrastText};
       &:hover {
-        color: ${theme.constants.primaryLightBlue};
+        color: ${theme.palette.secondary.main};
       }
     `}
 
     ${hasOutline && css`
       background-color: transparent;
-      border: 1px solid ${theme.constants.primaryLight};
-      color: ${theme.constants.primaryLight};
+      border: 1px solid ${theme.palette.primary.contrastText};
+      color: ${theme.palette.primary.contrastText};
 
       &:hover {
-        border: 1px solid ${theme.constants.primaryLightBlue};
-        color: ${theme.constants.primaryLightBlue};
+        border: 1px solid ${theme.palette.secondary.main};
+        color: ${theme.palette.secondary.main};
       }
     `}
 
     ${disabled && css`
-      color: ${theme.constants.primaryLight};
-      background-color: ${theme.constants.border};
-      border-color: ${theme.constants.border};
+      color: ${theme.palette.primary.contrastText};
+      background-color: ${theme.palette.grey.A100};
+      border-color: ${theme.palette.grey.A100};
       cursor: not-allowed;
 
       &:hover {
-        color: ${theme.constants.primaryLight};
-        background-color: ${theme.constants.border};
-        border-color: ${theme.constants.border};
+        color: ${theme.palette.primary.contrastText};
+        background-color: ${theme.palette.grey.A100};
+        border-color: ${theme.palette.grey.A100};
       }
     `}
 

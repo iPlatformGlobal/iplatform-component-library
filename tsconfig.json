@@ -22,7 +22,7 @@
     "sourceMap": true,
     "outDir": "dist",
     "stripInternal": true,
-    "noEmit": true
+    "noEmit": false
   },
   "include": [
     "src"
