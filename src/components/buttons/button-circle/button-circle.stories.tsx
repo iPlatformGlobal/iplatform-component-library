@@ -6,9 +6,7 @@ import { withKnobs } from "@storybook/addon-knobs";
 import { Canvas, Content, Description, Heading, } from '../../storybook';
 
 import { ButtonCircle } from './index';
-import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
-import SendIcon from '@material-ui/icons/Send';
-import HomeIcon from '@material-ui/icons/Home';
+import { AccountBalance as AccountBalanceIcon, Send as SendIcon, Home as HomeIcon } from '@material-ui/icons';
 
 const StyledButtonGroup = styled.div`
   display: flex;

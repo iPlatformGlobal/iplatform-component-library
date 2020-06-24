@@ -1,7 +1,8 @@
 import React from "react"
 import styled, { ThemeProvider } from 'styled-components';
+import { ThemeProvider as MuiThemeProvider, StylesProvider } from '@material-ui/core'
+import { CssBaseline } from '@material-ui/core';
 import { theme } from '../theme';
-import { StyledWrapperReset } from "../reset-ipf-2";
 
 const StyledStoryContainer = styled.div`
   margin: 5px;
@@ -9,19 +10,21 @@ const StyledStoryContainer = styled.div`
 
 
 const withTheme = (storyFn) => (
-  <StyledWrapperReset>
-    <ThemeProvider
-      theme={theme}
-    >
-      {/*<MUIThemeProvider*/}
-      {/*  theme={muiV2Theme}*/}
-      {/*>*/}
-      <StyledStoryContainer>
-        {storyFn()}
-      </StyledStoryContainer>
-      {/*</MUIThemeProvider>*/}
-    </ThemeProvider>
-  </StyledWrapperReset>
+  <CssBaseline>
+    <StylesProvider injectFirst>
+      <MuiThemeProvider
+        theme={theme}
+      >
+        <ThemeProvider
+          theme={theme}
+        >
+          <StyledStoryContainer>
+            {storyFn()}
+          </StyledStoryContainer>
+        </ThemeProvider>
+      </MuiThemeProvider>
+    </StylesProvider>
+  </CssBaseline>
 );
 
 export default withTheme;

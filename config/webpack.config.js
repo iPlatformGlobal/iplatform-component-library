@@ -23,6 +23,13 @@ const config = {
       amd: 'lodash',
       root: '_',
     },
+    '@material-ui': {
+      root: '@material-ui',
+      commonjs2: '@material-ui',
+      commonjs: '@material-ui',
+      amd: '@material-ui',
+      umd: '@material-ui',
+    }
   },
   mode: 'production',
   resolve: {

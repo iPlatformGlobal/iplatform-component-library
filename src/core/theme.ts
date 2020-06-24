@@ -1,6 +1,10 @@
 import { createMuiTheme } from '@material-ui/core';
 
-export const theme = {
+import { Overrides as CoreOverrides } from '@material-ui/core/styles/overrides';
+import { AutocompleteClassKey } from '@material-ui/lab';
+import { CSSProperties } from '@material-ui/styles';
+
+export const oldTheme = {
   palette: {
     primary: [
       '#3B3E44',  // 0
@@ -53,7 +57,7 @@ export const theme = {
   constants: {
     primary: '#3f586e',
     primaryLight: 'white',
-    primaryLightBlue: '#8ED8F8',
+    primaryLightBlue: '#8ed8f8',
     primaryDark: '#3E566B',
     primaryDarker: '#394F63',
     secondary: '#60839C',
@@ -64,7 +68,7 @@ export const theme = {
     backgroundSection: '#CBD4D9',
     backgroundSidebar: '#EAEAEA',
     backgroundSecondaryHeading: '#E3E3E3',
-    border: '#D8D8D8',
+    border: '#d8d8d8',
     loaderBackground: '#f3f3f3',
     loaderPrimary: '#dfe7ec',
   },
@@ -84,15 +88,52 @@ export const theme = {
   },
 };
 
-export type ApplicationTheme = typeof theme;
+export type OldApplicationTheme = typeof oldTheme;
 
-export const muiV2Theme = createMuiTheme({
-  palette: {
-    primary: {
-      light: '#60839c',
-      main: '#3f586e',
-      dark: '#394F63',
-      contrastText: 'white',
+interface IOverrides extends CoreOverrides {
+  // Define additional lab components here as needed....
+  MuiAutocomplete?: Partial<Record<AutocompleteClassKey, CSSProperties | (() => CSSProperties)>> | undefined;
+}
+
+const overrides: IOverrides = {
+  // MuiInput: {
+  //   root: {
+  //     height: '14px',
+  //     fontSize: '14px',
+  //     fontWeight: 500,
+  //     padding: '3px 0',
+  //   },
+  //   marginDense: {
+  //     padding: '3px 0',
+  //   },
+  // },
+  MuiInputLabel: {
+    root: {
+      fontSize: '14px',
+      fontWeight: 500,
+    },
+    formControl: {
+      transform: 'translate(0, 20px) scale(1)',
+    },
+    shrink: {
+      transform: 'translate(0, 1.5px) scale(0.9)',
     },
   },
+};
+
+export const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#3f586e',
+    },
+    secondary: {
+      main: '#8ed8f8',
+    },
+  },
+  typography: {
+    fontFamily: "'Roboto',sans-serif",
+  },
+  overrides,
 });
+
+export type ApplicationTheme = typeof theme;
