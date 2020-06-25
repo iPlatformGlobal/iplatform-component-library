@@ -3,6 +3,9 @@
   "version": "0.1.2",
   "main": "dist/index.js",
   "typings": "./dist/index.d.ts",
+  "publishConfig": {
+    "registry": "https://pkgs.dev.azure.com/iPlatformDevOps/0f962329-44eb-4a20-aa85-d4f9f5b79b8b/_packaging/iPlatformFrontEndArtifactsPrivate/npm/registry"
+  },
   "dependencies": {
     "@material-ui/core": "^4.10.2",
     "@material-ui/icons": "^4.9.1",
