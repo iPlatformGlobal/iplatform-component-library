@@ -35,7 +35,8 @@
     "build:clean": "rimraf dist",
     "publish:local": "yarn build:library && yalc publish --private",
     "push:fast": "git push",
-    "push": "git push"
+    "push": "git push",
+    "auth": "vsts-npm-auth -config .npmrc"
   },
   "eslintConfig": {
     "extends": "react-app"
