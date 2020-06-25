@@ -9,6 +9,7 @@
     "@material-ui/lab": "^4.0.0-alpha.56",
     "cross-env": "^7.0.2",
     "css-loader": "^3.5.3",
+    "lodash": "^4.17.15",
     "normalize.css": "^8.0.1",
     "react-dom": "^16.13.1",
     "react-hot-loader": "^4.12.21",
