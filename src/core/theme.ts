@@ -121,7 +121,7 @@ const overrides: IOverrides = {
   },
 };
 
-export const theme = createMuiTheme({
+export const theme = {
   palette: {
     primary: {
       main: '#3f586e',
@@ -134,6 +134,8 @@ export const theme = createMuiTheme({
     fontFamily: "'Roboto',sans-serif",
   },
   overrides,
-});
+};
 
-export type ApplicationTheme = typeof theme;
+export const muiTheme = createMuiTheme(theme);
+
+export type ApplicationTheme = typeof muiTheme;
