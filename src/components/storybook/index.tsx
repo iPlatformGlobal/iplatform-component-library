@@ -13,6 +13,10 @@ export const Canvas: FC<ICanvasProps> = styled.div<ICanvasProps>`
     padding: 15px;
     background-color: rgb(250,250,250);
   `)}
+  
+  ${useMixin('selectable', false, css`
+    user-select: none;
+  `)}
 `;
 
 Canvas.defaultProps = {
@@ -32,10 +36,9 @@ export const Description = styled.p`
 `;
 
 export const Content = styled.div<{noMargin?: boolean}>`
-    ${(props) => {
-      const noMargin = !!props.noMargin;
-      return css`
-        margin: ${noMargin ? '0' : '15px 0 50px 0'};
-      `
-    }};
+    margin: 15px 0 50px 0;
+
+    ${useMixin('noMargin', true, css`
+      margin: 0;
+    `)}
 `;

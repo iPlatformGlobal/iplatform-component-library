@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { withKnobs } from "@storybook/addon-knobs";
 
 import { Canvas, Description, Heading, } from '../../storybook';
 
 import Header from './index';
+import Button from '../../buttons/button';
 
 export default {
   title: 'Layout/Header',
@@ -23,17 +24,56 @@ export const All = () => (
   </>
 )
 
-export const Default = () => (
-  <Canvas>
-    <Heading>Header</Heading>
+export const Default = () => {
+  const [searchText, setSearchText] = useState('');
 
-    <Description>
-      Headers are typically white navbar-style elements with some drop shadow.
-    </Description>
+  return (
+    <Canvas>
+      <Heading>Header</Heading>
 
-    <Canvas styleVariant={'contrast'}>
-      <Header/>
+      <Description>
+        Headers are typically white navbar-style elements with some drop shadow.
+      </Description>
+
+      <Canvas styleVariant={'contrast'}>
+        <Header
+          primaryText={'Quote'}
+          secondaryText={'Secondary Text'}
+        />
+      </Canvas>
+
+      <Canvas styleVariant={'contrast'}>
+        <Header
+          primaryText={'Quote'}
+          secondaryText={'Secondary Text'}
+          primarySubText={'Another message'}
+        />
+      </Canvas>
+
+      <Canvas styleVariant={'contrast'}>
+        <Header
+          primaryText={'Quote'}
+          enableSearchBar={true}
+        >
+          <Button>Test</Button>
+          <Button>Test 2</Button>
+          <Button>Test 3</Button>
+        </Header>
+      </Canvas>
+
+      <Canvas styleVariant={'contrast'}>
+        <Header
+          primaryText={'Quote'}
+          secondaryText={'Secondary Text'}
+          primarySubText={'Another message'}
+          enableSearchBar={true}
+        >
+          <Button>Test</Button>
+          <Button>Test 2</Button>
+          <Button>Test 3</Button>
+        </Header>
+      </Canvas>
     </Canvas>
-  </Canvas>
-);
+  )
+}
 

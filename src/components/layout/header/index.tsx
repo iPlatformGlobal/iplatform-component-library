@@ -1,17 +1,25 @@
 import React, { FC } from 'react';
 import { HeaderContainer } from '../header-container';
+import { SearchInput } from '../../search/search-input';
+
 import {
   HeaderInner,
   HeaderRow,
   PrimaryText,
   HeaderOuter,
+  SecondaryText,
+  PrimarySubText,
 } from './styles';
 
 /** @Internal */
 export interface IProps {
-  minHeight?: number;
   primaryText?: string;
   primarySubText?: string;
+  secondaryText?: string;
+  onChangeSearch?: (...args) => void;
+  value?: string;
+
+  enableSearchBar?: boolean;
 
   [x: string]: any;
 }
@@ -19,39 +27,65 @@ export interface IProps {
 
 export const Header: FC<IProps> = (props) => {
   const {
-    children,
+    enableSearchBar,
     minHeight,
+    onChangeSearch,
     primarySubText,
     primaryText,
+    secondaryText,
+    value,
+    children,
   } = props;
 
   return (
     <HeaderContainer minHeight={minHeight}>
       <HeaderOuter>
-        <HeaderInner>
+        <HeaderInner noGrow>
           <HeaderRow>
             <PrimaryText>
               {primaryText}
             </PrimaryText>
+            {!!secondaryText && (
+              <SecondaryText>
+                {secondaryText}
+              </SecondaryText>
+            )}
           </HeaderRow>
           <HeaderRow>
-            {primarySubText}
+            <PrimarySubText>
+              {primarySubText}
+            </PrimarySubText>
           </HeaderRow>
         </HeaderInner>
-        <HeaderInner>
-          <HeaderRow>
-            Some random element that has a really long description
-          </HeaderRow>
-        </HeaderInner>
+        {enableSearchBar && (
+          <HeaderInner>
+            <HeaderRow centered>
+              <SearchInput
+                value={value ? value : ''}
+                onChange={onChangeSearch ? onChangeSearch : () => {}}
+              />
+            </HeaderRow>
+          </HeaderInner>
+        )}
+        {!!children && (
+          <HeaderInner noGrow>
+            <HeaderRow buttons>
+              {children}
+            </HeaderRow>
+          </HeaderInner>
+        )}
       </HeaderOuter>
     </HeaderContainer>
   );
 };
 
 Header.defaultProps = {
-  minHeight: 60,
-  primaryText: 'Product Catalogue',
-  primarySubText: 'A description would go here'
+  primaryText: '',
+  primarySubText: '',
+  secondaryText: '',
+  onChangeSearch: () => {},
+  value: '',
+  enableSearchBar: false,
 };
 
 export default Header;
