@@ -40,7 +40,8 @@
     "publish:local": "yarn build:library && yalc publish --private",
     "push:fast": "git push",
     "push": "git push",
-    "auth": "vsts-npm-auth -config .npmrc"
+    "auth": "vsts-npm-auth -config .npmrc",
+    "fetch": "git checkout master && git pull && git checkout dev && git pull"
   },
   "eslintConfig": {
     "extends": "react-app"
