@@ -8,3 +8,6 @@ export { theme, muiTheme } from './core/theme';
 export { ThemeProvider as StyledComponentThemeProvider };
 // export { MuiThemeProvider };
 
+export * from './components/buttons';
+export * from './components/layout';
+export * from './components/search';

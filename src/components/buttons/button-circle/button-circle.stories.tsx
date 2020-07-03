@@ -6,7 +6,12 @@ import { withKnobs } from "@storybook/addon-knobs";
 import { Canvas, Content, Description, Heading, } from '../../storybook';
 
 import { ButtonCircle } from './index';
-import { AccountBalance as AccountBalanceIcon, Send as SendIcon, Home as HomeIcon } from '@material-ui/icons';
+
+import {
+  AccountBalance as AccountBalanceIcon,
+  Send as SendIcon,
+  Home as HomeIcon
+} from '@material-ui/icons';
 
 const StyledButtonGroup = styled.div`
   display: flex;
@@ -20,14 +25,23 @@ const StyledButtonGroup = styled.div`
   }
 `;
 
+
 export default {
   title: 'Buttons/Circle Button',
   component: ButtonCircle,
+  // includeStories: [
+  //   All,
+  //   Default,
+  //   Theming,
+  //   CustomIcon,
+  //   Configuration,
+  // ],
   excludeStories: [],
   decorators: [
     withKnobs
   ]
 };
+
 
 export const All = () => (
   <Fragment>
@@ -165,3 +179,4 @@ export const Configuration = () => (
     </Content>
   </Canvas>
 )
+
