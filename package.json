@@ -32,6 +32,7 @@
     "build": "yarn run build:library",
     "test": "exit 0",
     "eject": "react-scripts eject",
+    "deploy": "./scripts/deploy.sh",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
     "build:library": "rimraf ./dist && webpack --config ./config/webpack.config.js",
