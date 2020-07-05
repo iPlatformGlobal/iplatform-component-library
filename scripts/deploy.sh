@@ -2,7 +2,9 @@ echo "building storybook..."
 yarn
 yarn run build-storybook
 echo "moving storybook folder..."
-mv ./storybook-static ../storybook-static
+rm -rf ../storybook-static
+mkdir ../storybook-static
+mv ./storybook-static/* ../storybook-static/
 git branch -D deploy/temp
 git checkout -b deploy/temp
 rm -rf .storybook config public src .gitignore .npmignore .npmrc package.json tsconfig.json yarn.lock
