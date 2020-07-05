@@ -1,4 +1,5 @@
 echo "building storybook..."
+yarn
 yarn run build-storybook
 echo "moving storybook folder..."
 mv ./storybook-static ../storybook-static
