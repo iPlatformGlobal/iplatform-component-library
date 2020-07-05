@@ -1,5 +1,5 @@
 echo "building storybook..."
-yarn build-storybook
+yarn run build-storybook
 echo "moving storybook folder..."
 mv ./storybook-static ../storybook-static
 git branch -D deploy/temp
