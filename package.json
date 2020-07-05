@@ -1,6 +1,6 @@
 {
   "name": "@iplatformglobal/component-library",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "main": "dist/index.js",
   "typings": "./dist/index.d.ts",
   "publishConfig": {
@@ -40,7 +40,8 @@
     "publish:local": "yarn build:library && yalc publish --private",
     "push:fast": "git push",
     "push": "git push",
-    "auth": "vsts-npm-auth -config .npmrc"
+    "auth": "vsts-npm-auth -config .npmrc",
+    "fetch": "git checkout master && git pull && git checkout dev && git pull"
   },
   "eslintConfig": {
     "extends": "react-app"
