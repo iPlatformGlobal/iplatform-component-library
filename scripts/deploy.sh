@@ -14,4 +14,6 @@ git commit -m "feat: deployed storybook"
 git push github gh-pages -f
 git checkout dev
 git branch -D deploy/temp
+git add . && git stash && git stash drop
+rm -rf ./storybook-static
 pause
