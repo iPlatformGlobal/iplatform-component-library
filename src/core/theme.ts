@@ -107,6 +107,11 @@ const overrides: IOverrides = {
   //     padding: '3px 0',
   //   },
   // },
+  MuiInputBase: {
+    input: {
+      fontSize: 12,
+    },
+  },
   MuiInputLabel: {
     root: {
       fontSize: '14px',
@@ -129,9 +134,13 @@ export const theme = {
     secondary: {
       main: '#8ed8f8',
     },
+    text: {
+      primary: '#3f586e',
+    },
   },
   typography: {
     fontFamily: "'Roboto',sans-serif",
+    fontSize: 12,
   },
   overrides,
 };
