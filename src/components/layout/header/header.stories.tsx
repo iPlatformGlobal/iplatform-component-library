@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { withKnobs } from "@storybook/addon-knobs";
 
-import { Canvas, Description, Heading, } from '../../storybook';
+import { Canvas, Description, Heading, ButtonRow, } from '../../storybook';
 
 import Header from './index';
 import Button from '../../buttons/button';
@@ -26,6 +26,10 @@ export const All = () => (
 
 export const Default = () => {
   const [searchText, setSearchText] = useState('');
+
+  const handleSearchTextChange = (event) => {
+    setSearchText(event?.target?.value);
+  }
 
   return (
     <Canvas>
@@ -54,10 +58,24 @@ export const Default = () => {
         <Header
           primaryText={'Quote'}
           enableSearchBar={true}
+          value={searchText}
+          onChangeSearch={handleSearchTextChange}
         >
-          <Button>Test</Button>
-          <Button>Test 2</Button>
-          <Button>Test 3</Button>
+        </Header>
+      </Canvas>
+
+      <Canvas styleVariant={'contrast'}>
+        <Header
+          primaryText={'Quote'}
+          enableSearchBar={true}
+          value={searchText}
+          onChangeSearch={handleSearchTextChange}
+        >
+          <ButtonRow>
+            <Button>Test</Button>
+            <Button>Test 2</Button>
+            <Button>Test 3</Button>
+          </ButtonRow>
         </Header>
       </Canvas>
 
@@ -67,10 +85,14 @@ export const Default = () => {
           secondaryText={'Secondary Text'}
           secondaryTextSuffix={'Another message'}
           enableSearchBar={true}
+          value={searchText}
+          onChangeSearch={handleSearchTextChange}
         >
-          <Button>Test</Button>
-          <Button>Test 2</Button>
-          <Button>Test 3</Button>
+          <ButtonRow>
+            <Button>Test</Button>
+            <Button>Test 2</Button>
+            <Button>Test 3</Button>
+          </ButtonRow>
         </Header>
       </Canvas>
 
@@ -83,9 +105,11 @@ export const Default = () => {
           enableLastEdited={true}
           lastEditedContentText={'test@iplatform.com | a day ago'}
         >
-          <Button>Test</Button>
-          <Button>Test 2</Button>
-          <Button>Test 3</Button>
+          <ButtonRow>
+            <Button>Test</Button>
+            <Button>Test 2</Button>
+            <Button>Test 3</Button>
+          </ButtonRow>
         </Header>
       </Canvas>
     </Canvas>

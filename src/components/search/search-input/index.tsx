@@ -4,7 +4,7 @@ import { Container, Input } from './styles';
 
 /** @Internal */
 export interface IProps {
-  onChange: (...args) => void;
+  onChange: (event) => void;
   value: string;
 }
 
@@ -15,7 +15,7 @@ export const SearchInput: FC<IProps> = (props) => {
   } = props;
 
   const handleSearchChange = (event) => {
-    onChange(event?.target?.value || '');
+    onChange(event);
   }
 
   return (

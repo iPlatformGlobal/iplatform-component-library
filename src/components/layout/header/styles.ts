@@ -15,6 +15,7 @@ export const HeaderOuter = styled.div`
 
 export const HeaderInner = styled.div<{
   noGrow?: boolean;
+  placeRight?: boolean;
 }>`
   box-sizing: border-box;
   display: flex;
@@ -24,6 +25,10 @@ export const HeaderInner = styled.div<{
   
   ${useMixin('noGrow', true, css`
     flex-grow: 0;
+  `)}
+  
+  ${useMixin('placeRight', true, css`
+    justify-self: flex-end;
   `)}
 `;
 

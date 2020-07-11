@@ -2,30 +2,52 @@ import React, { FC } from 'react';
 import { HeaderContainer } from '../header-container';
 import { SearchInput } from '../../search/search-input';
 
-import {
-  DateLabelBox,
-  HeaderInner,
-  HeaderOuter,
-  HeaderRow,
-  PrimaryText,
-  SecondaryText,
-  StatusBox,
-} from './styles';
+import { DateLabelBox, HeaderInner, HeaderOuter, HeaderRow, PrimaryText, SecondaryText, StatusBox, } from './styles';
 
 /** @Internal */
 export interface IProps {
+  /**
+   * onChange function for the search bar
+   */
   onChangeSearch?: (...args) => void;
+
+  /**
+   * Bold text appearing as the first item in the header
+   */
   primaryText?: string;
+
+  /**
+   * Additional text appended to primaryText, separated with a pipe character
+   */
   primaryTextSuffix?: string;
+
+  /**
+   * Optional thin text to the right of primaryText
+   */
   secondaryText?: string;
   secondaryTextSuffix?: string;
+
+  /**
+   * Displays a small status box below the primary text
+   */
   statusBoxText?: string;
+
+  /**
+   * Displays another small box next to the status box
+   */
   typeBoxText?: string;
+
   lastEditedLabelText?: string;
   lastEditedContentText?: string;
+
+  /**
+   * Searchbar value
+   */
   value?: string;
+
   enableSearchBar?: boolean;
   enableLastEdited?: boolean;
+
   minHeight?: any;
 }
 
@@ -99,12 +121,16 @@ export const Header: FC<IProps> = (props) => {
           </HeaderInner>
         )}
 
+        {!enableSearchBar && (
+          <div style={{ display: 'flex', flex: '1 1 auto' }}></div>
+        )}
+
         {!!children && (
-          <HeaderInner>
-            <HeaderRow buttons data-qa="buttons">
+          <>
+            <HeaderInner noGrow placeRight>
               {children}
-            </HeaderRow>
-          </HeaderInner>
+            </HeaderInner>
+          </>
         )}
       </HeaderOuter>
     </HeaderContainer>
