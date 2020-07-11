@@ -1,9 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const createStyledComponentsTransformer = require('typescript-plugin-styled-components').default;
-
-// the factory additionally accepts an options object which described below
-const styledComponentsTransformer = createStyledComponentsTransformer();
 
 const config = {
   entry: './src/index.ts',
@@ -48,9 +44,6 @@ const config = {
         test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
         use: 'ts-loader',
-        options: {
-          getCustomTransformers: () => ({ before: [styledComponentsTransformer] })
-        }
       }
     ]
   }
