@@ -3,60 +3,91 @@ import { HeaderContainer } from '../header-container';
 import { SearchInput } from '../../search/search-input';
 
 import {
+  DateLabelBox,
   HeaderInner,
+  HeaderOuter,
   HeaderRow,
   PrimaryText,
-  HeaderOuter,
   SecondaryText,
-  PrimarySubText,
+  StatusBox,
 } from './styles';
 
 /** @Internal */
 export interface IProps {
-  primaryText?: string;
-  primarySubText?: string;
-  secondaryText?: string;
   onChangeSearch?: (...args) => void;
+  primaryText?: string;
+  primaryTextSuffix?: string;
+  secondaryText?: string;
+  secondaryTextSuffix?: string;
+  statusBoxText?: string;
+  typeBoxText?: string;
+  lastEditedLabelText?: string;
+  lastEditedContentText?: string;
   value?: string;
-
   enableSearchBar?: boolean;
-
-  [x: string]: any;
+  enableLastEdited?: boolean;
+  minHeight?: any;
 }
 
 
 export const Header: FC<IProps> = (props) => {
   const {
+    children,
+    enableLastEdited,
     enableSearchBar,
+    lastEditedContentText,
+    lastEditedLabelText,
     minHeight,
     onChangeSearch,
-    primarySubText,
     primaryText,
+    primaryTextSuffix,
     secondaryText,
+    secondaryTextSuffix,
+    statusBoxText,
+    typeBoxText,
     value,
-    children,
   } = props;
 
   return (
     <HeaderContainer minHeight={minHeight}>
       <HeaderOuter>
         <HeaderInner noGrow>
-          <HeaderRow>
+          <HeaderRow padding>
             <PrimaryText>
               {primaryText}
+              {!!primaryTextSuffix && (
+                <span>&nbsp;|&nbsp;{primaryTextSuffix}</span>
+              )}
             </PrimaryText>
             {!!secondaryText && (
               <SecondaryText>
                 {secondaryText}
+                {!!secondaryTextSuffix && (
+                  <span>&nbsp;-&nbsp;{secondaryTextSuffix}</span>
+                )}
               </SecondaryText>
             )}
           </HeaderRow>
           <HeaderRow>
-            <PrimarySubText>
-              {primarySubText}
-            </PrimarySubText>
+            {!!statusBoxText && (
+              <StatusBox>
+                {statusBoxText}
+              </StatusBox>
+            )}
+            {!!typeBoxText && (
+              <StatusBox>
+                {typeBoxText}
+              </StatusBox>
+            )}
+            {!!enableLastEdited && (
+              <DateLabelBox>
+                <div className="primary">{lastEditedLabelText}</div>
+                <div className="secondary">{lastEditedContentText}</div>
+              </DateLabelBox>
+            )}
           </HeaderRow>
         </HeaderInner>
+
         {enableSearchBar && (
           <HeaderInner>
             <HeaderRow centered>
@@ -67,9 +98,10 @@ export const Header: FC<IProps> = (props) => {
             </HeaderRow>
           </HeaderInner>
         )}
+
         {!!children && (
-          <HeaderInner noGrow>
-            <HeaderRow buttons>
+          <HeaderInner>
+            <HeaderRow buttons data-qa="buttons">
               {children}
             </HeaderRow>
           </HeaderInner>
@@ -81,8 +113,13 @@ export const Header: FC<IProps> = (props) => {
 
 Header.defaultProps = {
   primaryText: '',
-  primarySubText: '',
+  primaryTextSuffix: '',
   secondaryText: '',
+  secondaryTextSuffix: '',
+  statusBoxText: '',
+  enableLastEdited: false,
+  lastEditedLabelText: 'Last Edited:',
+  lastEditedContentText: '',
   onChangeSearch: () => {},
   value: '',
   enableSearchBar: false,

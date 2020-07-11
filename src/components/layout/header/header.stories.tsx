@@ -46,7 +46,7 @@ export const Default = () => {
         <Header
           primaryText={'Quote'}
           secondaryText={'Secondary Text'}
-          primarySubText={'Another message'}
+          secondaryTextSuffix={'Another message'}
         />
       </Canvas>
 
@@ -65,8 +65,23 @@ export const Default = () => {
         <Header
           primaryText={'Quote'}
           secondaryText={'Secondary Text'}
-          primarySubText={'Another message'}
+          secondaryTextSuffix={'Another message'}
           enableSearchBar={true}
+        >
+          <Button>Test</Button>
+          <Button>Test 2</Button>
+          <Button>Test 3</Button>
+        </Header>
+      </Canvas>
+
+      <Canvas styleVariant={'contrast'}>
+        <Header
+          primaryText={'ACC-12345678'}
+          primaryTextSuffix={'John Smith'}
+          statusBoxText={'Published'}
+          typeBoxText={'Account'}
+          enableLastEdited={true}
+          lastEditedContentText={'test@iplatform.com | a day ago'}
         >
           <Button>Test</Button>
           <Button>Test 2</Button>
