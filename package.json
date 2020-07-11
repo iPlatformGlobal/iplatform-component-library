@@ -39,7 +39,7 @@
     "build:types": "tsc --emitDeclarationOnly",
     "build:clean": "rimraf dist",
     "publish:local": "yarn build:library && yalc publish --private",
-    "push:fast": "git push",
+    "push:fast": "./scripts/push_branch.sh",
     "push": "git push",
     "auth": "vsts-npm-auth -config .npmrc",
     "fetch": "git checkout master && git pull && git checkout dev && git pull"
