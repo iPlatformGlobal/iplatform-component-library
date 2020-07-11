@@ -138,17 +138,19 @@ export const Header: FC<IProps> = (props) => {
 };
 
 Header.defaultProps = {
+  enableLastEdited: false,
+  enableSearchBar: false,
+  lastEditedContentText: '',
+  lastEditedLabelText: 'Last Edited:',
+  minHeight: undefined,
+  onChangeSearch: () => {},
   primaryText: '',
   primaryTextSuffix: '',
   secondaryText: '',
   secondaryTextSuffix: '',
   statusBoxText: '',
-  enableLastEdited: false,
-  lastEditedLabelText: 'Last Edited:',
-  lastEditedContentText: '',
-  onChangeSearch: () => {},
+  typeBoxText: '',
   value: '',
-  enableSearchBar: false,
-};
+} as IProps;
 
 export default Header;
