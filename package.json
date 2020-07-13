@@ -1,6 +1,6 @@
 {
   "name": "@iplatformglobal/component-library",
-  "version": "0.1.9",
+  "version": "0.1.11",
   "main": "dist/index.js",
   "typings": "./dist/index.d.ts",
   "publishConfig": {
