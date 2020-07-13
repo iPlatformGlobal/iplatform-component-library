@@ -42,3 +42,11 @@ export const Content = styled.div<{noMargin?: boolean}>`
       margin: 0;
     `)}
 `;
+
+export const ButtonRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  justify-self: flex-end;
+  justify-content: flex-end;
+`;

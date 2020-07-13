@@ -14132,6 +14132,11 @@ typedarray@^0.0.6:
   resolved "https://pkgs.dev.azure.com/iPlatformDevOps/0f962329-44eb-4a20-aa85-d4f9f5b79b8b/_packaging/iPlatformFrontEndArtifactsPrivate/npm/registry/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
+typescript-plugin-styled-components@^1.4.4:
+  version "1.4.4"
+  resolved "https://pkgs.dev.azure.com/iPlatformDevOps/0f962329-44eb-4a20-aa85-d4f9f5b79b8b/_packaging/iPlatformFrontEndArtifactsPrivate/npm/registry/typescript-plugin-styled-components/-/typescript-plugin-styled-components-1.4.4.tgz#fff26d516ff213dffe1a5627fe76f23ae3ee6ada"
+  integrity sha1-//JtUW/yE9/+GlYn/nbyOuPuato=
+
 typescript@~3.7.2:
   version "3.7.5"
   resolved "https://pkgs.dev.azure.com/iPlatformDevOps/0f962329-44eb-4a20-aa85-d4f9f5b79b8b/_packaging/iPlatformFrontEndArtifactsPrivate/npm/registry/typescript/-/typescript-3.7.5.tgz#0692e21f65fd4108b9330238aac11dd2e177a1ae"

@@ -36,7 +36,7 @@ export const Default = () => {
       <Canvas styleVariant={'contrast'}>
         <SearchInput
           value={searchText}
-          onChange={setSearchText}
+          onChange={(event) => setSearchText(event?.target?.value)}
         />
       </Canvas>
     </Canvas>
