@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5ab1b522-e0b0-4f2f-9215-0c44ff78b863" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/scripts/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy.sh" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1eWpf9rgWsoR2LYEOloWlaTCnPY" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="C:\Users\Carl\Workspace\iplatform-repos\iplatform-component-library\node_modules\typescript\lib" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5ab1b522-e0b0-4f2f-9215-0c44ff78b863" name="Default Changelist" comment="" />
+      <created>1594447303865</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594447303865</updated>
+      <workItem from="1594447305798" duration="6670000" />
+      <workItem from="1594454016340" duration="2824000" />
+      <workItem from="1594633462755" duration="246000" />
+      <workItem from="1595941172866" duration="768000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: header bar additions">
+      <created>1594452116257</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1594452116257</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: header bar additions 2">
+      <created>1594453781695</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1594453781695</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: header bar additions 3">
+      <created>1594453852476</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1594453852476</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: header bar additions" />
+    <MESSAGE value="feat: header bar additions 2" />
+    <MESSAGE value="feat: header bar additions 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: header bar additions 3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="606" y="102" key="CommitChangelistDialog2" timestamp="1594453852095">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="606" y="102" key="CommitChangelistDialog2/0.0.2048.1112/2560.0.1920.1040@0.0.2048.1112" timestamp="1594453852095" />
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1594453843723">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/0.0.2048.1112/2560.0.1920.1040@0.0.2048.1112" timestamp="1594453843723" />
+  </component>
+</project>
